@@ -13,3 +13,56 @@
 .image_with_ice_cream {
   padding: 8px;
 }
+.content_of_promotion {
+  display: flex;
+  justify-content: center;
+}
+.imageContainerBlue {
+  background: url('../../utils/images/blue_ice_cream.jpg');
+  background-size: 100% 100%;
+  height: 338px;
+  width: 298px;
+  margin: 30px;
+}
+
+.imageContainerGreen {
+  background: url('../../utils/images/green_ice_cream.jpg');
+  background-size: 100% 100%;
+  height: 338px;
+  width: 298px;
+  margin: 30px;
+}
+.imageContainerRose {
+  background: url('../../utils/images/rose_ice_cream.jpg');
+  background-size: 100% 100%;
+  height: 338px;
+  width: 298px;
+  margin: 30px;
+}
+.raspberryFlavour {
+  color: #4dc1be;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: 'Lato';
+}
+.meldOfFlavor {
+  color: #a3bd3e;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: 'Lato';
+}
+.naturalSweetness {
+  color: #ba6972;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: 'Lato';
+}
+.icуCreamTaste {
+  font-weight: 600;
+  font-size: 22px;
+  font-family: 'Lato';
+  padding: 10px;
+}
+.informationAboutIceCream {
+  padding: 50px;
+}
