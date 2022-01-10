@@ -1,37 +1,19 @@
 import React from 'react';
-import styles from './index.module.css';
-import logo from '../../utils/images/logo.png';
-import ice_cream2 from '../../utils/images/ice-cream2.jpg';
-import icon from '../../utils/images/icon.png';
+import Header from '../../components/header/Header';
+import First_slide from '../../components/slides/first_slide';
 
 function Main() {
+  let props = {
+    title_small: 'BEST CHOICE',
+    title_big: 'YUMMY',
+    // image: changeImage(this.title_small),
+  };
   return (
-    <div>
-      <div className={styles.main}>
-        <div className={styles.header}>
-          <img src={logo} alt="logo" />
-          <la className={styles.list}>
-            <li className={styles.block}>Home</li>
-            <li className={styles.block}>Collection</li>
-            <li className={styles.block}>Shop</li>
-            <li className={styles.block}>Natural</li>
-            <li className={styles.block}>Candys</li>
-            <li className={styles.block}>Shooters</li>
-            <li className={styles.block}>Pages</li>
-          </la>
-        </div>
-      </div>
-      <div>
-        <img src={ice_cream2} alt="ice_cream" />
-        <div className={styles.slider_content}>
-          <div className={styles.slide}>
-            <img src={icon} alt="icon" />
-            <div>Best Choise</div>
-            <div>YUMMY</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <Header />
+      <First_slide title_small={props.title_small} title_big={props.title_big} />
+      {/* <Second_slide /> */}
+    </>
   );
 }
 

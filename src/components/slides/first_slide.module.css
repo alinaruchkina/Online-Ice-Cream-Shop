@@ -1,0 +1,40 @@
+.main {
+  margin: auto;
+  max-width: 1200px;
+}
+.slider_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+}
+.content__background_image {
+  width: 100%;
+  min-width: 800px;
+}
+
+.slide_text_first {
+  font-family: 'Lato';
+  font-size: 20px;
+  color: #fff;
+}
+.slide_text_second {
+  font-family: 'Lato';
+  font-size: 44px;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.slide {
+  margin-top: 16%;
+  padding-left: 30%;
+}
