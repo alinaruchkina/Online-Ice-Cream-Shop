@@ -7,8 +7,8 @@ function DescriptionOfThePromotion(params) {
     <div>
       <div>
         <div className={styles.headline}> Find Your Taste </div>
-        <div>Buy any ice cream @ get One Free</div>
-        <img src={icon} alt="icon of the ice cream" />
+        <div className={styles.promotion}>Buy any ice cream @ get One Free</div>
+        <img className={styles.image_with_ice_cream} src={icon} alt="icon of the ice cream" />
       </div>
     </div>
   );

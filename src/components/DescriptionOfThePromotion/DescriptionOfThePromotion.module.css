@@ -4,3 +4,12 @@
   font-size: 20px;
   font-weight: 700;
 }
+.promotion {
+  font-size: 26px;
+  font-family: 'Lato';
+  padding: 3px;
+  font-weight: 700;
+}
+.image_with_ice_cream {
+  padding: 8px;
+}
