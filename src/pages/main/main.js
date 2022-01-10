@@ -1,18 +1,21 @@
 import React from 'react';
 import Header from '../../components/header/Header';
 import First_slide from '../../components/slides/first_slide';
+import DescriptionOfThePromotion from '../../components/DescriptionOfThePromotion/DescriptionOfThePromotion';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Main() {
-  let props = {
-    title_small: 'BEST CHOICE',
-    title_big: 'YUMMY',
-    // image: changeImage(this.title_small),
-  };
+  const currentSlide = useSelector(({ slider }) => slider.currentSlide);
+  console.log(currentSlide);
   return (
     <>
       <Header />
-      <First_slide title_small={props.title_small} title_big={props.title_big} />
-      {/* <Second_slide /> */}
+      <First_slide
+        title_small={currentSlide.title_small}
+        title_big={currentSlide.title_big}
+        image={currentSlide.image}
+      />
+      <DescriptionOfThePromotion />
     </>
   );
 }

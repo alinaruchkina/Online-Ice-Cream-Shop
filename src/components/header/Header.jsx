@@ -8,13 +8,13 @@ function Header() {
     <div className={styles.main}>
       <div className={styles.header}>
         <img src={logo} alt="logo" />
-        <la className={styles.header__list}>
+        <div className={styles.header__list}>
           {nav.map((item, index) => (
             <li key={index} className={styles.header__list_block}>
               {item}
             </li>
           ))}
-        </la>
+        </div>
       </div>
     </div>
   );

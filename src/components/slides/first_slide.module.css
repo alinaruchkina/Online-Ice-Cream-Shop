@@ -1,6 +1,8 @@
 .main {
   margin: auto;
   max-width: 1200px;
+  position: relative;
+  height: 457px;
 }
 .slider_content {
   display: flex;
@@ -37,4 +39,30 @@
 .slide {
   margin-top: 16%;
   padding-left: 30%;
+}
+@media screen and (min-width: 1000px) {
+  .main {
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+    height: 520px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+    height: 480px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+    height: 348px;
+  }
 }

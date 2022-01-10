@@ -6,10 +6,11 @@ export function changeImage(title) {
   switch (title) {
     case 'BEST CHOICE':
       return image1;
-    case 'Sweetest Taste':
+    case 'SWEETEST TESTY':
       return image2;
-    case 'Natural Ingredients':
+    case 'NATURAL INGREDIENTS':
       return image3;
     default:
+      return image1;
   }
 }

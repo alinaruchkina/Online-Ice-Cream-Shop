@@ -1,7 +1,7 @@
 export const nextSlide = () => ({
-  type: 'MINUS_CART_ITEM',
+  type: 'NEXT_SLIDE',
 });
 
 export const prevSlide = () => ({
-  type: 'MINUS_CART_ITEM',
+  type: 'PREV_SLIDE',
 });
