@@ -1,14 +1,16 @@
 .main {
   display: flex;
+  padding: 15px;
 }
 .header {
   display: flex;
   width: 100%;
   text-align: center;
-  justify-content: space-evenly;
-  max-width: 1000px;
+  justify-content: space-around;
+  max-width: 900px;
   margin: auto;
   list-style: none;
+  line-height: 115px;
 }
 .header__list {
   display: flex;
@@ -17,6 +19,9 @@
 }
 .header__list_block {
   margin-left: 40px;
+}
+.cake {
+  padding: 10px;
 }
 @media screen and (max-width: 900px) {
   .header {

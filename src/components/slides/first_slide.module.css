@@ -43,9 +43,9 @@
 @media screen and (min-width: 1000px) {
   .main {
     margin: auto;
-    max-width: 1200px;
+    max-width: 1700px;
     position: relative;
-    height: 520px;
+    height: 750px;
   }
 }
 

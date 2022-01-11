@@ -8,7 +8,7 @@ import rose_ice_cream from '../../utils/images/rose_ice_cream.jpg';
 function DescriptionOfThePromotion(params) {
   return (
     <div>
-      <div>
+      <div className={styles.stock_title}>
         <div className={styles.headline}> Find Your Taste </div>
         <div className={styles.promotion}>Buy any ice cream @ get One Free</div>
         <img className={styles.image_with_ice_cream} src={icon} alt="icon of the ice cream" />

@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className={styles.main}>
       <div className={styles.header}>
-        <img src={logo} alt="logo" />
+        <img className={styles.cake} src={logo} alt="logo" />
         <div className={styles.header__list}>
           {nav.map((item, index) => (
             <li key={index} className={styles.header__list_block}>
