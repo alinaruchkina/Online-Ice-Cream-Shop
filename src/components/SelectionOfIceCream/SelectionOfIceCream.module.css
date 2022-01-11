@@ -1,0 +1,32 @@
+.stock_title {
+  padding: 50px;
+}
+.headline {
+  color: #f06b9a;
+  font-family: 'Pacifico';
+  font-size: 30px;
+  font-weight: 500;
+}
+.promotion {
+  font-size: 40px;
+  font-family: 'Petrona';
+  padding: 3px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.image_with_ice_cream {
+  padding: 8px;
+}
+.selection {
+  display: flex;
+  justify-content: space-evenly;
+}
+.selection_of_ice_cream {
+  font-size: 17px;
+  font-family: 'Lato';
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 11px 17px;
+  color: #4dc1be;
+}
