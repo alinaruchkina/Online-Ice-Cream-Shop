@@ -1,3 +1,6 @@
+.main_of_the_selection {
+  background: #f8e9ec;
+}
 .stock_title {
   padding: 50px;
 }
@@ -14,33 +17,45 @@
   font-weight: 700;
   letter-spacing: 3px;
 }
+.image_of_the_product {
+  border-radius: 100px;
+  border: 10px solid #b89aa2;
+}
 .image_with_ice_cream {
   padding: 8px;
 }
 .selection {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .selection_of_ice_cream {
   font-size: 17px;
   font-family: 'Lato';
   cursor: pointer;
   border: 1px solid;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 11px 17px;
   color: #4dc1be;
 }
 .products_container {
   display: flex;
-  justify-content: space-evenly;
-  height: 170px;
+  justify-content: space-around;
+  height: 173px;
+  padding: 35px 63px 0px 5px;
 }
 .product_names {
   display: flex;
   justify-content: space-evenly;
 }
 .product {
-  font-family: 'Pacifico';
+  font-family: 'Petrona';
   font-size: 18px;
-  color: darkgoldenrod;
+  font-weight: 600;
+  padding: 15px;
+}
+.price_of_the_ice_cake {
+  color: #f06b9a;
+  font-weight: 600;
+  margin-right: 10px;
+  font-family: 'Petrona';
 }

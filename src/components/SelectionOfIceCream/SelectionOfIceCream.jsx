@@ -11,7 +11,7 @@ import ice_cake7 from '../../utils/images/Toasted_Strawberry.jpg';
 
 function SelectionOfIceCream() {
   return (
-    <div>
+    <div className={styles.main_of_the_selection}>
       <div className={styles.stock_title}>
         <div className={styles.headline}> Best Taste of Desserts </div>
         <div className={styles.promotion}>Our Products</div>
@@ -23,35 +23,42 @@ function SelectionOfIceCream() {
         <div className={styles.selection_of_ice_cream}>Cream Cone</div>
       </div>
       <div className={styles.products_container}>
-        <img src={ice_cake} alt="ice cake" />
-        <img src={ice_cake2} alt="ice cake" />
-        <img src={ice_cake3} alt="ice cake" />
-        <img src={ice_cake4} alt="ice cake" />
-        <img src={ice_cake5} alt="ice cake" />
-        <img src={ice_cake6} alt="ice cake" />
-        <img src={ice_cake7} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake2} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake3} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake4} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake5} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake6} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake7} alt="ice cake" />
       </div>
       <div className={styles.product_names}>
         <div>
           <div className={styles.product}>Choco Cherry</div>
+          <div className={styles.price_of_the_ice_cake}>37$</div>
         </div>
         <div>
           <div className={styles.product}>Creamy Cake</div>
+          <div className={styles.price_of_the_ice_cake}>24$</div>
         </div>
         <div>
           <div className={styles.product}>Peppermint Chip</div>
+          <div className={styles.price_of_the_ice_cake}>41$</div>
         </div>
         <div>
           <div className={styles.product}>Red Velvet Cake</div>
+          <div className={styles.price_of_the_ice_cake}>19$</div>
         </div>
         <div>
           <div className={styles.product}>Roster Cream Cake</div>
+          <div className={styles.price_of_the_ice_cake}>24$</div>
         </div>
         <div>
           <div className={styles.product}>Rainbow Sherbet</div>
+          <div className={styles.price_of_the_ice_cake}>29$</div>
         </div>
         <div>
           <div className={styles.product}>Toasted Strawberry</div>
+          <div className={styles.price_of_the_ice_cake}>43$</div>
         </div>
       </div>
     </div>
