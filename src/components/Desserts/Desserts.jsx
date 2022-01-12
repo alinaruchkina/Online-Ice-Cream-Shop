@@ -1,0 +1,16 @@
+import React from 'react';
+import styles from './Desserts.module.css';
+import Dessert from '../../utils/images/desserts.jpg';
+function Desserts() {
+  return (
+    <div className={styles.main_desserts}>
+      <div className={styles.image_container_desserts}>
+        <div className={styles.selection_of_desserts}>
+          <div className={styles.find_your_taste}>Find Your Taste of Desserts</div>
+          <div className={styles.button_read_more}>Read more</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+export default Desserts;
