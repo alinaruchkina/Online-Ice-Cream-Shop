@@ -11,7 +11,6 @@ function Main() {
   console.log(currentSlide);
   return (
     <>
-      <Header />
       <First_slide
         title_small={currentSlide.title_small}
         title_big={currentSlide.title_big}
