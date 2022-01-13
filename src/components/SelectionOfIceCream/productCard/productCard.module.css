@@ -20,6 +20,7 @@
 .image_of_the_product {
   border-radius: 100px;
   border: 10px solid #b89aa2;
+  height: 145px;
 }
 .image_with_ice_cream {
   padding: 8px;
@@ -40,9 +41,10 @@
 .products_container {
   display: flex;
   justify-content: space-around;
-  height: 173px;
-  padding: 35px 63px 0px 5px;
+  margin-top: 30px;
+  width: 100%;
 }
+
 .product_names {
   display: flex;
   justify-content: space-evenly;
@@ -59,16 +61,4 @@
   margin-right: 10px;
   font-family: 'Petrona';
   font-size: 20px;
-}
-
-.ProductCard_wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-  width: 1000px;
-}
-
-.item {
-  width: auto;
 }

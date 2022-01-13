@@ -1,0 +1,26 @@
+.product_inscription {
+  letter-spacing: 4px;
+  font-family: 'Lato';
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.image_vanilla_prague {
+  width: 400px;
+}
+.vanilla_prague_container {
+}
+.specification_vanilla_prague {
+  font-family: 'Lato';
+}
+
+.test {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.header_vanilla_prague {
+  font-size: 40px;
+  font-family: 'Lato';
+}

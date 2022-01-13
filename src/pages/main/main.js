@@ -8,7 +8,6 @@ import Desserts from '../../components/Desserts/Desserts';
 
 function Main() {
   const currentSlide = useSelector(({ slider }) => slider.currentSlide);
-  console.log(currentSlide);
   return (
     <>
       <First_slide

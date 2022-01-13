@@ -1,15 +1,14 @@
 import React from 'react';
 import styles from './SelectionOfIceCream.module.css';
 import icon from '../../utils/images/icon_of_the_ice_cream.png';
-import ice_cake from '../../utils/images/Choco_Cherry.jpg';
-import ice_cake2 from '../../utils/images/Creamy_Cake.jpg';
-import ice_cake3 from '../../utils/images/Peppermint_Chip.jpg';
-import ice_cake4 from '../../utils/images/Red_Velvet_Cake.jpg';
-import ice_cake5 from '../../utils/images/Roster_Cream_Cake.jpg';
-import ice_cake6 from '../../utils/images/Rainbow_Sherbet.jpg';
-import ice_cake7 from '../../utils/images/Toasted_Strawberry.jpg';
+import ProductCard from './productCard/productCard';
+import { useSelector } from 'react-redux';
+import style from 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 function SelectionOfIceCream() {
+  const cake_carousel = useSelector((state) => state.cake_carousel.cake_carousel);
   return (
     <div className={styles.main_of_the_selection}>
       <div className={styles.stock_title}>
@@ -22,44 +21,21 @@ function SelectionOfIceCream() {
         <div className={styles.selection_of_ice_cream}>Ice Bars</div>
         <div className={styles.selection_of_ice_cream}>Cream Cone</div>
       </div>
-      <div className={styles.products_container}>
-        <img className={styles.image_of_the_product} src={ice_cake} alt="ice cake" />
-        <img className={styles.image_of_the_product} src={ice_cake2} alt="ice cake" />
-        <img className={styles.image_of_the_product} src={ice_cake3} alt="ice cake" />
-        <img className={styles.image_of_the_product} src={ice_cake4} alt="ice cake" />
-        <img className={styles.image_of_the_product} src={ice_cake5} alt="ice cake" />
-        <img className={styles.image_of_the_product} src={ice_cake6} alt="ice cake" />
-        <img className={styles.image_of_the_product} src={ice_cake7} alt="ice cake" />
-      </div>
-      <div className={styles.product_names}>
-        <div>
-          <div className={styles.product}>Choco Cherry</div>
-          <div className={styles.price_of_the_ice_cake}>37$</div>
-        </div>
-        <div>
-          <div className={styles.product}>Creamy Cake</div>
-          <div className={styles.price_of_the_ice_cake}>24$</div>
-        </div>
-        <div>
-          <div className={styles.product}>Peppermint Chip</div>
-          <div className={styles.price_of_the_ice_cake}>41$</div>
-        </div>
-        <div>
-          <div className={styles.product}>Red Velvet Cake</div>
-          <div className={styles.price_of_the_ice_cake}>19$</div>
-        </div>
-        <div>
-          <div className={styles.product}>Roster Cream Cake</div>
-          <div className={styles.price_of_the_ice_cake}>24$</div>
-        </div>
-        <div>
-          <div className={styles.product}>Rainbow Sherbet</div>
-          <div className={styles.price_of_the_ice_cake}>29$</div>
-        </div>
-        <div>
-          <div className={styles.product}>Toasted Strawberry</div>
-          <div className={styles.price_of_the_ice_cake}>43$</div>
-        </div>
+      <div className={styles.ProductCard_wrap}>
+        <Carousel
+          showArrows={true}
+          showIndicators={false}
+          infiniteLoop={true}
+          swipeable={true}
+          width={1000}
+          centerMode={true}
+          centerSlidePercentage={10}>
+          {cake_carousel.map((item, index) => (
+            // <div key={index} className={style.item}>
+            <ProductCard image={item.image} name={item.name} price={item.price} />
+            // </div>
+          ))}
+        </Carousel>
       </div>
     </div>
   );
