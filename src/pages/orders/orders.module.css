@@ -1,0 +1,9 @@
+.orders {
+  max-width: 1000px;
+  min-width: 700px;
+  margin: auto;
+}
+
+.orders__card {
+  display: flex;
+}
