@@ -24,3 +24,13 @@
   font-size: 40px;
   font-family: 'Lato';
 }
+
+.card__taste {
+  display: flex;
+}
+
+.card__taste_element {
+  border: 1px solid #000;
+  margin-left: 10px;
+  padding: 3px 5px;
+}
