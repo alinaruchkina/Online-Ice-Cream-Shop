@@ -5,6 +5,7 @@ import { deleteAllCard } from './../../state/actions/orders';
 
 function Orders() {
   const orders = useSelector((state) => state.orders.orders);
+  console.log('com', orders);
   const dispatch = useDispatch();
   return (
     <div className={styles.orders}>

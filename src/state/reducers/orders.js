@@ -9,6 +9,12 @@ const orders = (state = initialState, action) => {
         ...state,
         orders: [],
       };
+    case 'ADDED_NEW_CARD':
+      console.log('orders:', action.payload);
+      return {
+        ...state,
+        orders: [...state.orders, { ...action.payload }],
+      };
     default:
       return state;
   }

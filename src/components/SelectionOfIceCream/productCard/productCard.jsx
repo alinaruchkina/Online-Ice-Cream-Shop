@@ -6,7 +6,7 @@ function ProductCard({ image, name, price }) {
   return (
     <div>
       <div className={styles.products_container}>
-        <img className={styles.image_of_the_product} src={image} alt="ice cake" />
+        <img className={styles.image_of_the_product} src={ice_cake} alt="ice cake" />
       </div>
       <div className={styles.product_names}>
         <div>

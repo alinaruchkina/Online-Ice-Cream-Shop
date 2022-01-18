@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Orders from '../pages/orders/orders';
-import Product_Cart from './../components/Product_Cart/Product_Cart';
+import Selected_Card from './../components/Selected_Card/Selected_Card';
 import Main from './../pages/main/main';
 
 function Routes() {
@@ -12,7 +12,7 @@ function Routes() {
           <Orders />
         </Route>
         <Route path="/card">
-          <Product_Cart />
+          <Selected_Card />
         </Route>
         <Route path="/" exact>
           <Main />
