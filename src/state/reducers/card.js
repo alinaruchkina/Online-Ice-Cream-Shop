@@ -1,11 +1,9 @@
-import { useDispatch } from 'react-redux';
-import { addedNewCard } from '../actions/orders';
 const initialState = {
   card: [
     {
       image: '',
       name: 'test',
-      teste: ['chocolate', 'lemon', 'vanilla'],
+      taste: ['chocolate', 'lemon', 'vanilla'],
       description: 'test test test',
       price: 28,
       amount: 1,
@@ -14,7 +12,7 @@ const initialState = {
     {
       image: '',
       name: 'test',
-      teste: ['chocolate', 'lemon', 'vanilla'],
+      taste: ['chocolate', 'lemon', 'vanilla'],
       description: 'test test test',
       price: 48,
       amount: 3,
@@ -23,9 +21,10 @@ const initialState = {
   ],
   currentCard: {
     image: '',
-    name: 'test',
+    name: 'Vanilla Prague',
+    type: 'Ice Cream',
     taste: ['chocolate', 'lemon', 'vanilla', 'banana'],
-    description: 'test test test',
+    description: 'Creamy Vanilla Ice Cream with Chocolate Syrup',
     price: 28,
     amount: 1,
     id: 1,
@@ -35,16 +34,8 @@ const initialState = {
 const Card = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_CARD_TO_ORDER':
-      let currentCard = {
-        ...state.currentCard,
-        taste: state.currentCard.taste[action.payload.taste],
-        amount: action.payload.amount,
-      };
-      // useDispatch(addedNewCard(currentCard));
-      // console.log('card:', currentCard);
       return {
         ...state,
-        addNewCardToOrder: currentCard,
       };
     default:
       return state;

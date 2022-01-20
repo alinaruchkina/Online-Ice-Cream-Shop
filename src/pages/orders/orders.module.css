@@ -6,4 +6,69 @@
 
 .orders__card {
   display: flex;
+  margin-top: 10px;
+  padding: 10px;
+  border: solid rgba(0, 0, 0, 0.3);
+  border-width: 0px 0px 1px 0px;
+}
+
+.orders__card__description {
+  text-align: left;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orders__card__description_name {
+  font-family: 'Pacifico';
+  font-weight: 600;
+}
+.orders__card__description_taste {
+  font: 'Pacifico';
+  font-weight: 600;
+}
+
+.orders__card__description_amount {
+  font: 'Pacifico';
+  font-weight: 600;
+  padding-top: 3px;
+}
+
+.orders__card__description_taste_plus {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  display: inline;
+  cursor: pointer;
+  padding: 1px 7px;
+  margin-right: 10px;
+}
+.orders__card__description_taste_plus:hover {
+  border: 3px solid rgba(236, 30, 30, 0.644);
+  transition: 0.3s;
+}
+
+.orders__card__description_taste_minus {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  display: inline;
+  cursor: pointer;
+  padding: 1px 7px;
+  margin-left: 10px;
+}
+.orders__card__description_taste_minus:hover {
+  border: 3px solid rgba(236, 30, 30, 0.644);
+  transition: 0.3s;
+}
+
+.amount_box {
+  display: flex;
+}
+
+.orders__card__description_price {
+  font: 'Pacifico';
+  font-weight: 600;
+}
+
+.orders__card_image {
+  width: 150px;
+  height: 150px;
 }

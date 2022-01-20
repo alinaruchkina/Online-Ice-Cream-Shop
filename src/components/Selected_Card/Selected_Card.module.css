@@ -34,10 +34,12 @@
   margin-left: 10px;
   padding: 3px 5px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .card_taste_element_selected {
   border: 1px solid red;
+  border-radius: 5px;
 }
 
 .card__quantity {

@@ -1,7 +1,4 @@
-export const addCardToOrder = (tasteIndex, amount) => ({
+export const addCardToOrder = (card, tasteIndex, amount) => ({
   type: 'ADD_CARD_TO_ORDER',
-  payload: {
-    taste: tasteIndex,
-    amount,
-  },
+  payload: { card, taste: tasteIndex, amount },
 });

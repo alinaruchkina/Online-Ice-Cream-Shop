@@ -8,18 +8,11 @@ import { Link } from 'react-router-dom';
 
 function Product_Cart() {
   const currentCard = useSelector((state) => state.card.currentCard);
-  // const test = useSelector((state) => state.orders.orders);
-  const card = useSelector((state) => state.card.addNewCardToOrder);
   const dispatch = useDispatch();
   const [taste, setTaste] = useState(0);
   const [amount, setAmount] = useState(1);
-  useEffect(() => {
-    // const card = useSelector((state) => state.card.addNewCardToOrder);
-    // return card;
-  }, [amount, taste]);
   const addCard = () => {
-    dispatch(addCardToOrder(taste, amount));
-    dispatch(addedNewCard(card));
+    dispatch(addCardToOrder(currentCard, taste, amount));
   };
 
   return (
