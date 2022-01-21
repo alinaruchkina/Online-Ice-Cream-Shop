@@ -6,3 +6,11 @@ export const addedNewCard = (card) => ({
   type: 'ADDED_NEW_CARD',
   payload: card,
 });
+
+export const changeAmountCard = (id, action) => ({
+  type: 'CHANGE_AMOUNT_CARD',
+  payload: {
+    id,
+    action,
+  },
+});

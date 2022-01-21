@@ -1,16 +1,6 @@
 const initialState = {
-  orders: [
-    {
-      image: '',
-      name: 'Vanilla Prague',
-      type: 'Ice Cream',
-      taste: ['chocolate', 'lemon', 'vanilla', 'banana'],
-      description: 'Creamy Vanilla Ice Cream with Chocolate Syrup',
-      price: 28,
-      amount: 1,
-      id: 1,
-    },
-  ],
+  orders: [],
+  totalPrice: 0,
 };
 
 const orders = (state = initialState, action) => {
@@ -19,6 +9,7 @@ const orders = (state = initialState, action) => {
       return {
         ...state,
         orders: [],
+        totalPrice: 0,
       };
     case 'ADD_CARD_TO_ORDER':
       let currentCard = {
@@ -26,10 +17,40 @@ const orders = (state = initialState, action) => {
         taste: action.payload.card.taste[action.payload.taste],
         amount: action.payload.amount,
       };
-      console.log(currentCard);
+      let newOrders = [...state.orders, { ...currentCard }];
       return {
         ...state,
-        orders: [...state.orders, { ...currentCard }],
+        orders: newOrders,
+        totalPrice: newOrders
+          .map((element) => {
+            return element.amount * element.price;
+          })
+          .reduce((sum, current) => {
+            return sum + current;
+          }),
+      };
+    case 'CHANGE_AMOUNT_CARD':
+      let newAmountCard = [
+        ...state.orders.map((elem) => {
+          if (action.payload.id === elem.id) {
+            if (action.payload.action) {
+              return { ...elem, amount: elem.amount + 1 };
+            } else {
+              return { ...elem, amount: elem.amount - 1 };
+            }
+          }
+        }),
+      ];
+      return {
+        ...state,
+        orders: [...newAmountCard],
+        totalPrice: newAmountCard
+          .map((element) => {
+            return element.amount * element.price;
+          })
+          .reduce((sum, current) => {
+            return sum + current;
+          }),
       };
     default:
       return state;
