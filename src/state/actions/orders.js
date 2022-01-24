@@ -7,15 +7,19 @@ export const addedNewCard = (card) => ({
   payload: card,
 });
 
-export const changeAmountCard = (id, action) => ({
+export const changeAmountCard = (id, action, taste) => ({
   type: 'CHANGE_AMOUNT_CARD',
   payload: {
     id,
     action,
+    taste,
   },
 });
 
-export const deleteOneCard = (id) => ({
+export const deleteOneCard = (id, taste) => ({
   type: 'DELETE_ONE_CARD',
-  payload: id,
+  payload: {
+    id,
+    taste,
+  },
 });

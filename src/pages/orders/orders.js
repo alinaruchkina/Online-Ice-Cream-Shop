@@ -32,20 +32,24 @@ function Orders() {
                   <div
                     className={styles.orders__card__description_taste_plus}
                     onClick={
-                      item.amount > 1 ? () => dispatch(changeAmountCard(item.id, false)) : null
+                      item.amount > 1
+                        ? () => dispatch(changeAmountCard(item.id, false, item.taste))
+                        : null
                     }>
                     -
                   </div>
                   <div className={styles.orders__card__description_amount}>{item.amount}</div>
                   <div
                     className={styles.orders__card__description_taste_minus}
-                    onClick={() => dispatch(changeAmountCard(item.id, true))}>
+                    onClick={() => dispatch(changeAmountCard(item.id, true, item.taste))}>
                     +
                   </div>
                 </div>
                 <div className={styles.orders__card__description_price}>{item.price}$</div>
               </div>
-              <div className={styles.delete_one} onClick={() => dispatch(deleteOneCard(item.id))}>
+              <div
+                className={styles.delete_one}
+                onClick={() => dispatch(deleteOneCard(item.id, item.taste))}>
                 X
               </div>
             </div>

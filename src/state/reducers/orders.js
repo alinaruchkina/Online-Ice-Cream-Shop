@@ -12,19 +12,20 @@ const orders = (state = initialState, action) => {
         totalPrice: 0,
       };
     case 'DELETE_ONE_CARD':
-      let newOrder = [
-        state.orders.map((index, elem) => {
-          if ((action.payload = elem.id)) {
-            return [...state.orders.splice(index, 1)];
-          }
-        }),
-      ];
+      let newOrder = state.orders.map((elem, index) => {
+        if (action.payload.id === elem.id && action.payload.taste === elem.taste) {
+          return [];
+        } else {
+          return { ...state.orders[index] };
+        }
+      });
       return {
         ...state,
-        orders: [...newOrder],
+        orders: [...newOrder.flat()],
         totalPrice:
-          newOrder !== 0
+          newOrder.flat().length !== 0
             ? newOrder
+                .flat()
                 .map((element) => {
                   return element.amount * element.price;
                 })
@@ -34,12 +35,28 @@ const orders = (state = initialState, action) => {
             : 0,
       };
     case 'ADD_CARD_TO_ORDER':
-      let currentCard = {
-        ...action.payload.card,
-        taste: action.payload.card.taste[action.payload.taste],
-        amount: action.payload.amount,
-      };
-      let newOrders = [...state.orders, { ...currentCard }];
+      let newCard = false;
+      let currentCard;
+      let newOrders;
+      newOrders = state.orders.map((item) => {
+        if (
+          item.taste === action.payload.card.taste[action.payload.taste] &&
+          item.id === action.payload.card.id
+        ) {
+          newCard = true;
+          return { ...item, amount: item.amount + action.payload.card.amount };
+        } else {
+          return { ...item };
+        }
+      });
+      if (!newCard) {
+        currentCard = {
+          ...action.payload.card,
+          taste: action.payload.card.taste[action.payload.taste],
+          amount: action.payload.amount,
+        };
+        newOrders = [...state.orders, { ...currentCard }];
+      }
       return {
         ...state,
         orders: newOrders,
@@ -54,12 +71,14 @@ const orders = (state = initialState, action) => {
     case 'CHANGE_AMOUNT_CARD':
       let newAmountCard = [
         ...state.orders.map((elem) => {
-          if (action.payload.id === elem.id) {
+          if (action.payload.id === elem.id && action.payload.taste === elem.taste) {
             if (action.payload.action) {
               return { ...elem, amount: elem.amount + 1 };
             } else {
               return { ...elem, amount: elem.amount - 1 };
             }
+          } else {
+            return { ...elem };
           }
         }),
       ];
