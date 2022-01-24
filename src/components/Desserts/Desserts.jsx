@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Desserts.module.css';
-import Dessert from '../../utils/images/desserts.jpg';
 function Desserts() {
   return (
     <div>

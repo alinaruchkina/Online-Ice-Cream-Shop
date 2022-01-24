@@ -10,3 +10,9 @@
   text-align: center;
   margin: auto;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}

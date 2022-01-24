@@ -1,9 +1,6 @@
 import React from 'react';
 import styles from './DescriptionOfThePromotion.module.css';
 import icon from '../../utils/images/icon_of_the_ice_cream.png';
-import blue_ice_cream from '../../utils/images/blue_ice_cream.jpg';
-import green_ice_cream from '../../utils/images/green_ice_cream.jpg';
-import rose_ice_cream from '../../utils/images/rose_ice_cream.jpg';
 
 function DescriptionOfThePromotion(params) {
   return (

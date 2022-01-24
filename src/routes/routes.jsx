@@ -14,10 +14,10 @@ function Routes() {
         <Route path="/card">
           <Selected_Card />
         </Route>
-        <Route path="/" exact>
+        <Route path={['/home']} exact>
           <Main />
         </Route>
-        <Redirect to="/" />
+        <Redirect to="/home" />
       </Switch>
     </div>
   );

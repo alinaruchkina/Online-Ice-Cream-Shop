@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Selected_Card.module.css';
 import vanilla_prague from '../../utils/images/vanilla_prague.jpg';
 import { useSelector, useDispatch } from 'react-redux';
 import { addCardToOrder } from '../../state/actions/card';
-import { addedNewCard } from '../../state/actions/orders';
-import { Link } from 'react-router-dom';
 
 function Product_Cart() {
   const currentCard = useSelector((state) => state.card.currentCard);
@@ -14,7 +12,6 @@ function Product_Cart() {
   const addCard = () => {
     dispatch(addCardToOrder(currentCard, taste, amount));
   };
-
   return (
     <div>
       <div className={styles.header_product}>
@@ -23,7 +20,6 @@ function Product_Cart() {
       </div>
       <div className={styles.test} key={currentCard.id}>
         <div>
-          <div className={styles.header_vanilla_prague}>{currentCard.name}</div>
           <img
             className={styles.image_vanilla_prague}
             src={currentCard.image ? currentCard.image : vanilla_prague}
@@ -31,6 +27,14 @@ function Product_Cart() {
           />
         </div>
         <div>
+          <div className={styles.description}>Price:</div>
+          <div className={styles.description}>Color:</div>
+          <div className={styles.description}>Flavour:</div>
+          <div className={styles.description}>Quantity:</div>
+        </div>
+        <div>
+          <div className={styles.header_vanilla_prague}>{currentCard.name}</div>
+
           <div className={styles.vanilla_prague_container}>
             <div className={styles.specification_vanilla_prague}>{currentCard.description}</div>
           </div>
@@ -47,7 +51,6 @@ function Product_Cart() {
             ))}
           </div>
           <div className={styles.card__quantity}>
-            <div>Quantity:</div>
             <div
               className={styles.card__quantity_minus}
               onClick={amount === 1 ? null : () => setAmount(amount - 1)}>
@@ -62,7 +65,6 @@ function Product_Cart() {
         </div>
       </div>
       <button onClick={addCard}>Add to order</button>
-      <Link to="/orders">tttttt</Link>
     </div>
   );
 }

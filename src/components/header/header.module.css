@@ -7,6 +7,7 @@
   width: 100%;
   text-align: center;
   justify-content: space-around;
+  /* justify-content: space-between; */
   max-width: 900px;
   margin: auto;
   list-style: none;
@@ -19,10 +20,33 @@
 }
 .header__list_block {
   margin-left: 40px;
+  font-weight: 600;
+  display: inline;
+}
+
+.header__link {
+  display: inline;
+}
+.header__list_block:hover {
+  transition: 0.5s;
+  color: #f06b9a;
 }
 .cake {
   padding: 10px;
 }
+
+.basket_amount {
+  border: 2px solid #f06b9a;
+  border-radius: 50%;
+  display: initial;
+  position: relative;
+  padding: 0px 7px;
+}
+
+.activeList {
+  color: #f06b9a;
+}
+
 @media screen and (max-width: 900px) {
   .header {
     display: flex;
@@ -31,5 +55,6 @@
     max-width: 1000px;
     margin: auto;
     list-style: none;
+    justify-content: space-around;
   }
 }

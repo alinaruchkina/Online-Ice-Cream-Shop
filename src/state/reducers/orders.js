@@ -11,6 +11,28 @@ const orders = (state = initialState, action) => {
         orders: [],
         totalPrice: 0,
       };
+    case 'DELETE_ONE_CARD':
+      let newOrder = [
+        state.orders.map((index, elem) => {
+          if ((action.payload = elem.id)) {
+            return [...state.orders.splice(index, 1)];
+          }
+        }),
+      ];
+      return {
+        ...state,
+        orders: [...newOrder],
+        totalPrice:
+          newOrder !== 0
+            ? newOrder
+                .map((element) => {
+                  return element.amount * element.price;
+                })
+                .reduce((sum, current) => {
+                  return sum + current;
+                })
+            : 0,
+      };
     case 'ADD_CARD_TO_ORDER':
       let currentCard = {
         ...action.payload.card,

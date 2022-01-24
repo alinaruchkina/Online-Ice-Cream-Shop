@@ -15,7 +15,6 @@ const initialState = {
 };
 
 const slider = (state = initialState, action) => {
-  let curSlide;
   switch (action.type) {
     case 'NEXT_SLIDE':
       return {

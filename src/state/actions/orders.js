@@ -14,3 +14,8 @@ export const changeAmountCard = (id, action) => ({
     action,
   },
 });
+
+export const deleteOneCard = (id) => ({
+  type: 'DELETE_ONE_CARD',
+  payload: id,
+});

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './orders.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteAllCard, changeAmountCard } from './../../state/actions/orders';
+import { deleteAllCard, changeAmountCard, deleteOneCard } from './../../state/actions/orders';
 import defaultImage from '../../utils/images/green_ice_cream.jpg';
 
 function Orders() {
@@ -42,6 +42,7 @@ function Orders() {
               </div>
               <div className={styles.orders__card__description_price}>{item.price}$</div>
             </div>
+            <div onClick={() => dispatch(deleteOneCard(item.id))}>Delete</div>
           </div>
         ))}
 
