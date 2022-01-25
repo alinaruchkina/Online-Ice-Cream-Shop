@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Selected_Card.module.css';
 import vanilla_prague from '../../utils/images/vanilla_prague.jpg';
 import { useSelector, useDispatch } from 'react-redux';
-import { addCardToOrder } from '../../state/actions/card';
+import { addCardToOrder, setCard } from '../../state/actions/card';
+import { useParams } from 'react-router-dom';
 
 function Product_Cart() {
+  let { id } = useParams();
   const currentCard = useSelector((state) => state.card.currentCard);
   const dispatch = useDispatch();
   const [taste, setTaste] = useState(0);
   const [amount, setAmount] = useState(1);
+  useEffect(() => {
+    dispatch(setCard(id));
+  }, []);
   const addCard = () => {
     dispatch(addCardToOrder(currentCard, taste, amount));
   };
