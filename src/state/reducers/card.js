@@ -1,5 +1,5 @@
-import praline from '../../utils/images/praline.jpg';
-import cream_with_cookies from '../../utils/images/cream_with_cookies.jpg';
+import maple_walnut from '../../utils/images/maple_walnut.png';
+import strawberry from '../../utils/images/strawberry.png';
 import vanilla_dream from '../../utils/images/vanilla_dream.png';
 import pistachio from '../../utils/images/pistachio.png';
 import chocolate_and_coconut from '../../utils/images/coconut_chocolate.png';
@@ -12,20 +12,20 @@ import banana from '../../utils/images/banana.png';
 const initialState = {
   card: [
     {
-      image: praline,
-      name: 'PLALINE',
-      taste: ['creamy', 'caramel', 'vanilla'],
-      description: 'Creamy Vanilla Ice Cream with Pecans in Praline Glaze and Caramel Layer',
-      price: 35,
+      image: maple_walnut,
+      name: 'MAPLE WALNUT',
+      taste: ['caramel', 'vanilla'],
+      description: 'Creamy Ice Cream with maple syrup and walnuts',
+      price: 55,
       amount: 1,
       id: 1,
     },
     {
-      image: cream_with_cookies,
-      name: 'CREAM WITH COOKIES',
-      taste: ['banana', 'chocolate', 'vanilla'],
-      description: 'Creamy and Soft Ice Cream with Chocolate Chip Cookies',
-      price: 43,
+      image: strawberry,
+      name: 'STRAWBERRY',
+      taste: ['strawberry'],
+      description: 'Classic Strawberry Ice Cream with slices of freshly picked Strawberries',
+      price: 45,
       amount: 1,
       id: 2,
     },

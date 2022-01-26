@@ -17,7 +17,7 @@ function Header() {
           <NavLink to="/home" className={styles.header__link} activeClassName={styles.activeList}>
             <li className={styles.header__list_block}>Home</li>
           </NavLink>
-          <NavLink to="/card" className={styles.header__link} activeClassName={styles.activeList}>
+          <NavLink to="/cards" className={styles.header__link} activeClassName={styles.activeList}>
             <li className={styles.header__list_block}>Collection</li>
           </NavLink>
           <NavLink to="/orders" className={styles.header__link} activeClassName={styles.activeList}>

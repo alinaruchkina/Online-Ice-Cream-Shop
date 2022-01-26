@@ -15,9 +15,7 @@ function Routes() {
         <Route path="/cards">
           <Cards />
         </Route>
-        <Route path="/card:id">
-          <Selected_Card />
-        </Route>
+        <Route path="/card/:id" component={Selected_Card}></Route>
         <Route path={['/home']} exact>
           <Main />
         </Route>

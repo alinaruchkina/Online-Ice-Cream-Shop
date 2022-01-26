@@ -1,0 +1,10 @@
+.ice_cream_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cart_main_box {
+  width: 400px;
+  padding: 10px;
+  margin: 10px;
+}
