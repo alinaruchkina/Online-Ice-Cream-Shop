@@ -12,10 +12,11 @@ function Cards() {
         {cards.map((item) => (
           <Link
             className={styles.link}
+            key={item.id}
             to={{
               pathname: `/card/${item.id}`,
             }}>
-            <div className={styles.cart_main_box} key={item.id}>
+            <div className={styles.cart_main_box}>
               <div>
                 <img className={styles.image} src={item.image} alt="image" />
               </div>

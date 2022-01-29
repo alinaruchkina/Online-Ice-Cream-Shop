@@ -71,7 +71,7 @@ function Orders() {
         </div>
         <div className={styles.buy}>Buy</div>
       </div>
-      <Footer bottom />
+      {/* <Footer bottom /> */}
     </div>
   );
 }

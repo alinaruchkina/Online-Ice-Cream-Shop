@@ -44,7 +44,7 @@ const orders = (state = initialState, action) => {
           item.id === action.payload.card.id
         ) {
           newCard = true;
-          return { ...item, amount: item.amount + action.payload.card.amount };
+          return { ...item, amount: item.amount + action.payload.amount };
         } else {
           return item;
         }
