@@ -17,7 +17,6 @@ function Product_Cart() {
   const addCard = () => {
     dispatch(addCardToOrder(currentCard, taste, amount));
   };
-
   return (
     <div>
       {!currentCard ? (

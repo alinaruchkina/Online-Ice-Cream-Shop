@@ -40,6 +40,31 @@
   margin-top: 16%;
   padding-left: 30%;
 }
+
+.button__switch {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 99%;
+}
+
+.button_previous {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: solid 0px;
+  width: 80px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 43px;
+}
+
+.button_previous:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 43px;
+}
 @media screen and (min-width: 1000px) {
   .main {
     margin: auto;

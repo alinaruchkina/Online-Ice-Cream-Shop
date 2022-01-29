@@ -15,9 +15,9 @@ function Cards() {
             }}>
             <div className={styles.cart_main_box} key={item.id}>
               <img src={item.image} alt="image" />
-              <div>{item.name}</div>
-              <div>{item.description}</div>
-              <div>{item.price}$</div>
+              <div className={styles.card_name}>{item.name}</div>
+              <div className={styles.card_description}>{item.description}</div>
+              <div className={styles.card_price}>{item.price}$</div>
             </div>
           </Link>
         ))}

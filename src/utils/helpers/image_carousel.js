@@ -6,7 +6,7 @@ export function changeImage(title) {
   switch (title) {
     case 'BEST CHOICE':
       return image1;
-    case 'SWEETEST TESTY':
+    case 'SWEETEST TASTE':
       return image2;
     case 'NATURAL INGREDIENTS':
       return image3;

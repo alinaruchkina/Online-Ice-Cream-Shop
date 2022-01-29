@@ -13,7 +13,7 @@ let sliderArray = [
     title_big: 'YUMMY',
   },
   {
-    title_small: 'SWEETEST TESTY',
+    title_small: 'SWEETEST TASTE',
     title_big: 'YUMMY',
   },
   {

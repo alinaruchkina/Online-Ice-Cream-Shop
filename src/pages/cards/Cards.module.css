@@ -8,3 +8,16 @@
   padding: 10px;
   margin: 10px;
 }
+.card_name {
+  font-family: 'Petrona';
+  font-weight: 600;
+  font-size: 25px;
+}
+.card_description {
+  font-family: 'Pacifico';
+  font-weight: 500;
+}
+.card_price {
+  font-family: 'Pacifico';
+  font-weight: 600;
+}

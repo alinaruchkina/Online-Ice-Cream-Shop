@@ -104,13 +104,14 @@ const initialState = {
     },
   ],
   currentCard: {
-    image: '',
-    name: 'Vanilla Prague',
-    taste: ['chocolate', 'lemon', 'vanilla', 'banana'],
-    description: 'Creamy Vanilla Ice Cream with Chocolate Syrup',
-    price: 28,
+    image: banana,
+    name: 'BANANA',
+    taste: ['banana'],
+    description:
+      'A Mix of ripe and less ripe Bananas, which are hand-selected. Perfect for pairing with Alpine Cream.',
+    price: 38,
     amount: 1,
-    id: 1,
+    id: 10,
   },
 };
 

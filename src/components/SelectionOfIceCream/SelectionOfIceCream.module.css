@@ -27,6 +27,7 @@
 .selection {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 .selection_of_ice_cream {
   font-size: 17px;
@@ -36,6 +37,7 @@
   border-radius: 25px;
   padding: 11px 17px;
   color: #4dc1be;
+  margin: 0px 10px;
 }
 .products_container {
   display: flex;

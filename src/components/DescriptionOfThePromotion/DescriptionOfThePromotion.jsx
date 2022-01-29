@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './DescriptionOfThePromotion.module.css';
 import icon from '../../utils/images/icon_of_the_ice_cream.png';
 
-function DescriptionOfThePromotion(params) {
+function DescriptionOfThePromotion() {
   return (
     <div>
       <div className={styles.stock_title}>
