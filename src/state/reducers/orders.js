@@ -46,7 +46,7 @@ const orders = (state = initialState, action) => {
           newCard = true;
           return { ...item, amount: item.amount + action.payload.card.amount };
         } else {
-          return { ...item };
+          return item;
         }
       });
       if (!newCard) {
@@ -78,7 +78,7 @@ const orders = (state = initialState, action) => {
               return { ...elem, amount: elem.amount - 1 };
             }
           } else {
-            return { ...elem };
+            return elem;
           }
         }),
       ];

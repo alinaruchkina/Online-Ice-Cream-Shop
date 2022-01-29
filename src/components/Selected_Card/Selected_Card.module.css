@@ -118,6 +118,7 @@
   font-weight: 600;
   -webkit-transition: 0.5s ease;
   color: #000;
+  margin-bottom: 20px;
 }
 
 .button_to_order:hover {

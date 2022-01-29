@@ -11,25 +11,31 @@ function DescriptionOfThePromotion() {
         <img className={styles.image_with_ice_cream} src={icon} alt="icon of the ice cream" />
       </div>
       <div className={styles.content_of_promotion}>
-        <div className={styles.imageContainerBlue}>
-          <div className={styles.informationAboutIceCream}>
-            <div className={styles.raspberryFlavour}>Raspberry Flavour</div>
-            <div className={styles.icуCreamTaste}>Blue Moon</div>
-          </div>
-        </div>
-        <div>
-          <div className={styles.imageContainerGreen}>
+        <div className={styles.card_box}>
+          <div className={styles.imageContainerBlue}>
             <div className={styles.informationAboutIceCream}>
-              <div className={styles.meldOfFlavor}>Meld of Flavor</div>
-              <div className={styles.icуCreamTaste}>Neapolitan</div>
+              <div className={styles.raspberryFlavour}>Raspberry Flavour</div>
+              <div className={styles.icуCreamTaste}>Blue Moon</div>
             </div>
           </div>
         </div>
         <div>
-          <div className={styles.imageContainerRose}>
-            <div className={styles.informationAboutIceCream}>
-              <div className={styles.naturalSweetness}>Natural Sweetness</div>
-              <div className={styles.icуCreamTaste}>Lucuma</div>
+          <div className={styles.card_box}>
+            <div className={styles.imageContainerGreen}>
+              <div className={styles.informationAboutIceCream}>
+                <div className={styles.meldOfFlavor}>Meld of Flavor</div>
+                <div className={styles.icуCreamTaste}>Neapolitan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className={styles.card_box}>
+            <div className={styles.imageContainerRose}>
+              <div className={styles.informationAboutIceCream}>
+                <div className={styles.naturalSweetness}>Natural Sweetness</div>
+                <div className={styles.icуCreamTaste}>Lucuma</div>
+              </div>
             </div>
           </div>
         </div>

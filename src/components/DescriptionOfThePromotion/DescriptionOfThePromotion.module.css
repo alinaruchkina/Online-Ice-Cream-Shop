@@ -20,7 +20,13 @@
 .content_of_promotion {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
+
+.card_box {
+  margin: 10px 0px;
+}
+
 .imageContainerBlue {
   background: url('../../utils/images/blue_ice_cream.jpg');
   height: 433px;

@@ -4,6 +4,7 @@ import vanilla_prague from '../../utils/images/vanilla_prague.jpg';
 import { useSelector, useDispatch } from 'react-redux';
 import { addCardToOrder, setCard } from '../../state/actions/card';
 import { Redirect, useParams } from 'react-router-dom';
+import Footer from '../Footer/footer';
 
 function Product_Cart() {
   let { id } = useParams();
@@ -81,6 +82,7 @@ function Product_Cart() {
           </button>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

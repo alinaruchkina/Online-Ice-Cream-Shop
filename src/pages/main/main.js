@@ -4,6 +4,7 @@ import DescriptionOfThePromotion from '../../components/DescriptionOfThePromotio
 import SelectionOfIceCream from '../../components/SelectionOfIceCream/SelectionOfIceCream';
 import { useSelector } from 'react-redux';
 import Desserts from '../../components/Desserts/Desserts';
+import Footer from '../../components/Footer/footer';
 
 function Main() {
   const currentSlide = useSelector(({ slider }) => slider.currentSlide);
@@ -17,6 +18,7 @@ function Main() {
       <DescriptionOfThePromotion />
       <SelectionOfIceCream />
       <Desserts />
+      <Footer />
     </>
   );
 }

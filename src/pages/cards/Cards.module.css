@@ -4,20 +4,37 @@
   justify-content: center;
 }
 .cart_main_box {
-  width: 400px;
+  width: 330px;
   padding: 10px;
   margin: 10px;
+  display: flex;
 }
 .card_name {
   font-family: 'Petrona';
-  font-weight: 600;
-  font-size: 25px;
+  font-weight: 900;
+  font-size: 21px;
+  color: #f06b9a;
 }
 .card_description {
   font-family: 'Pacifico';
   font-weight: 500;
+  font-size: 14px;
 }
 .card_price {
   font-family: 'Pacifico';
   font-weight: 600;
+}
+
+.image {
+  width: 140px;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.link {
+  display: flex;
 }

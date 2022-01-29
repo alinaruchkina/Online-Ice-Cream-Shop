@@ -11,12 +11,6 @@ function Desserts() {
           </div>
         </div>
       </div>
-      <div>
-        <div>
-          <div>Vanilla Choco Chip</div>
-          <div>Read more</div>
-        </div>
-      </div>
     </div>
   );
 }
