@@ -12,11 +12,11 @@ const orders = (state = initialState, action) => {
         totalPrice: 0,
       };
     case 'DELETE_ONE_CARD':
-      let newOrder = state.orders.map((elem, index) => {
+      let newOrder = state.orders.map((elem) => {
         if (action.payload.id === elem.id && action.payload.taste === elem.taste) {
           return [];
         } else {
-          return { ...state.orders[index] };
+          return elem;
         }
       });
       return {
