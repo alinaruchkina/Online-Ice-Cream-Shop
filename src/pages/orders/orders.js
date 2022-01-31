@@ -14,40 +14,42 @@ function Orders() {
       <div className={styles.orders}>
         {orders &&
           orders.map((item) => (
-            <div>
+            <div key={item.id}>
               <div className={styles.orders__card}>
                 <img
                   className={styles.orders__card_image}
                   src={item.image ? item.image : defaultImage}
                   alt="1"
                 />
-                <div className={styles.orders__card__description}>
-                  <div className={styles.description_name}>Name:</div>
-                  <div className={styles.description_taste}>Taste:</div>
-                  <div className={styles.description_amount}>Amount:</div>
-                  <div className={styles.description_price}>Price:</div>
-                </div>
-                <div className={styles.orders__card__description}>
-                  <div className={styles.orders__card__description_name}>{item.name}</div>
-                  <div className={styles.orders__card__description_taste}>{item.taste}</div>
-                  <div className={styles.amount_box}>
-                    <div
-                      className={styles.orders__card__description_taste_plus}
-                      onClick={
-                        item.amount > 1
-                          ? () => dispatch(changeAmountCard(item.id, false, item.taste))
-                          : null
-                      }>
-                      -
-                    </div>
-                    <div className={styles.orders__card__description_amount}>{item.amount}</div>
-                    <div
-                      className={styles.orders__card__description_taste_minus}
-                      onClick={() => dispatch(changeAmountCard(item.id, true, item.taste))}>
-                      +
-                    </div>
+                <div className={styles.descr}>
+                  <div className={styles.orders__card__description}>
+                    <div className={styles.description_name}>Name:</div>
+                    <div className={styles.description_taste}>Taste:</div>
+                    <div className={styles.description_amount}>Amount:</div>
+                    <div className={styles.description_price}>Price:</div>
                   </div>
-                  <div className={styles.orders__card__description_price}>{item.price}$</div>
+                  <div className={styles.orders__card__description_card}>
+                    <div className={styles.orders__card__description_name}>{item.name}</div>
+                    <div className={styles.orders__card__description_taste}>{item.taste}</div>
+                    <div className={styles.amount_box}>
+                      <div
+                        className={styles.orders__card__description_taste_plus}
+                        onClick={
+                          item.amount > 1
+                            ? () => dispatch(changeAmountCard(item.id, false, item.taste))
+                            : null
+                        }>
+                        -
+                      </div>
+                      <div className={styles.orders__card__description_amount}>{item.amount}</div>
+                      <div
+                        className={styles.orders__card__description_taste_minus}
+                        onClick={() => dispatch(changeAmountCard(item.id, true, item.taste))}>
+                        +
+                      </div>
+                    </div>
+                    <div className={styles.orders__card__description_price}>{item.price}$</div>
+                  </div>
                 </div>
                 <div
                   className={styles.delete_one}

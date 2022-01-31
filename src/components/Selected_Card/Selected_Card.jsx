@@ -8,13 +8,13 @@ import Footer from '../Footer/footer';
 
 function Product_Cart() {
   let { id } = useParams();
+  useEffect(() => {
+    dispatch(setCard(+id));
+  }, []);
   const currentCard = useSelector((state) => state.card.currentCard);
   const dispatch = useDispatch();
   const [taste, setTaste] = useState(0);
   const [amount, setAmount] = useState(1);
-  useEffect(() => {
-    dispatch(setCard(Number(id)));
-  }, []);
   const addCard = () => {
     dispatch(addCardToOrder(currentCard, taste, amount));
   };

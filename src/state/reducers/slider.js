@@ -1,9 +1,11 @@
-import { changeImage } from '../../utils/helpers/image_carousel';
+import image1 from '../../utils/images/content_background_girl.jpg';
+import image2 from '../../utils/images/second_slide.jpg';
+import image3 from '../../utils/images/third_slide.jpg';
 const initialState = {
   currentSlide: {
     title_small: 'BEST CHOICE',
     title_big: 'YUMMY',
-    image: changeImage(),
+    image: image1,
   },
 };
 
@@ -11,14 +13,17 @@ let sliderArray = [
   {
     title_small: 'BEST CHOICE',
     title_big: 'YUMMY',
+    image: image1,
   },
   {
     title_small: 'SWEETEST TASTE',
     title_big: 'YUMMY',
+    image: image2,
   },
   {
     title_small: 'NATURAL INGREDIENTS',
     title_big: 'YUMMY',
+    image: image3,
   },
 ];
 
@@ -32,8 +37,7 @@ const slider = (state = initialState, action) => {
           if (index > sliderArray.length - 1) {
             index = 0;
           }
-          let currentImage = changeImage(sliderArray[index].title_small);
-          curSlide = { ...sliderArray[index], image: currentImage };
+          curSlide = { ...sliderArray[index] };
         }
       });
       return {
@@ -47,8 +51,7 @@ const slider = (state = initialState, action) => {
           if (index < 0) {
             index = sliderArray.length - 1;
           }
-          let currentImage = changeImage(sliderArray[index].title_small);
-          curSlide = { ...sliderArray[index], image: currentImage };
+          curSlide = { ...sliderArray[index] };
         }
       });
       return {
